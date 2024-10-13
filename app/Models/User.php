@@ -12,33 +12,22 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
+    // One-to-One (User belongs to Membership)
+    public function membership()
+    {
+        return $this->belongsTo(Membership::class, 'membership_id');
+    }
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
+    // One-to-Many (User has many Borrowing records)
+    public function borrowings()
+    {
+        return $this->hasMany(Borrowing::class, 'user_id');
+    }
 
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    // One-to-Many (User has many Purchases)
+    public function purchases()
+    {
+        return $this->hasMany(Purchase::class, 'user_id');
+    }
+    
 }
