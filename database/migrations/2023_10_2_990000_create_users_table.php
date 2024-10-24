@@ -13,14 +13,13 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('user_firstname');
-            $table->string('user_surname');
-            $table->string('user_email')->unique();
-            $table->string('user_password');
-            $table->string('user_mobile')->nullable();
-            $table->string('user_role')->default('user');
-            $table->string('user_photo')->nullable();
-            $table->text('user_address')->nullable();
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->string('password');
+            $table->string('mobile')->nullable();
+            $table->string('role')->default('user');
+            $table->string('photo')->nullable();
+            $table->text('address')->nullable();
             
             $table->unsignedBigInteger('membership_id')->nullable(); // Foreign key
 

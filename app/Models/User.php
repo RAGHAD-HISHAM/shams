@@ -12,6 +12,18 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+/**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'name',  // Add 'name' to the fillable array
+        'email',
+        'password',
+        // Add any other attributes that you want to allow for mass assignment
+    ];
+    
     // One-to-One (User belongs to Membership)
     public function membership()
     {
