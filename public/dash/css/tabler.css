@@ -16604,6 +16604,13 @@ Navbar brand
   width: auto;
 }
 
+.blur-background {
+  
+  backdrop-filter: blur(10px); /* Apply blur effect */
+  z-index: 1; /* Behind the caption but above the image */
+
+}
+
 /**
 Navbar toggler
  */
