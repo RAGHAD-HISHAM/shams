@@ -4,8 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/svg" href="{{ asset('favicon.svg') }}">
+
     <title>@yield('title', 'Shams Library Dashboard')</title>
+
+
     <!-- CSS files -->
     <link href="{{ asset('dash/css/tabler.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('dash/css/tabler.css') }}" rel="stylesheet" />
@@ -36,14 +41,30 @@
 <body>
     <script src="{{ asset('dash/js/demo-theme.min.js') }}"></script>
     <div class="page">
+        @include('includes.site_header')
+        @yield('landing')
         <div class="page-wrapper">
-            @include('includes.site_header')
+            <!-- Page header -->
+            <div class="page-header d-print-none">
+                <div class="container-xl">
+                    <div class="row g-2 align-items-center">
+                        <div class="col">
+                            <h2 class="page-title">
+                                @yield('page header')
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-body">
+                <div class="container-xl">
 
-      
-                    @include('includes.site_hero')
+                    @yield('content')
 
 
-            @include('admin.includes.footer')
+                </div>
+            </div>
+                    @include('admin.includes.footer')
         </div>
     </div>
 

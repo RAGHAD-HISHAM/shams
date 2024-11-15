@@ -7,7 +7,7 @@
 
         </div>
       </div>
-     
+
       <div class="nav-item dropdown">
 
         <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label="Open user menu">
@@ -49,18 +49,19 @@
       <div class="col">
         <!-- Page pre-title -->
         <div class="page-pretitle">
-          Overview
+          @yield('page pretitle')
         </div>
         <h2 class="page-title">
-          Vertical transparent layout
+          @yield('page tite')
         </h2>
       </div>
       <!-- Page title actions -->
       <div class="col-auto ms-auto d-print-none">
         <div class="btn-list">
           <span class="d-none d-sm-inline">
-            <a href="#" class="btn">
-              New view
+            <a href="{{@yield('link to the first btn')}}" class="btn">
+            @yield('first btn')
+
             </a>
           </span>
           <a href="#" class="btn btn-primary d-none d-sm-inline-block" data-bs-toggle="modal"

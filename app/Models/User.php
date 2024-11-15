@@ -21,6 +21,10 @@ class User extends Authenticatable
         'name',  // Add 'name' to the fillable array
         'email',
         'password',
+        'mobile',
+        'photo',
+        'address',
+
         // Add any other attributes that you want to allow for mass assignment
     ];
     

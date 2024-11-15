@@ -25,8 +25,18 @@ Route::get('/', function () {
     return view('landing');
 });
 Route::get('/dashboard', function () {
-    return view('mainDash');
+    return view('admin.dashboard');
 });
+Route::get('/about', function () {
+    return view('site.about');
+});
+Route::get('/membership', function () {
+    return view('site.membership');
+});
+Route::get('/profile', function () {
+    return view('site.profile');
+});
+
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

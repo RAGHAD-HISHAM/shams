@@ -31,6 +31,17 @@
                 @enderror
             </div>
             <div class="mb-3">
+                <label for="mobile" class="form-label">{{ __('Mobile') }}</label>
+                <input type="text" class="form-control @error('mobile') is-invalid @enderror" placeholder="Enter mobile"
+                    name="mobile" value="{{ old('mobile') }}" required autocomplete="mobile" autofocus>
+
+                @error('name')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
+            <div class="mb-3">
                 <label for="password" class="form-label">{{ __('Password') }}</label>
                 <div class="input-group input-group-flat">
                     <input type="password" class="form-control @error('password') is-invalid @enderror"
