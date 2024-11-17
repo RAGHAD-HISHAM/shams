@@ -8,6 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'category_name',
+        'category_photo'
+    ];
      // Many-to-Many (Category belongs to many Books)
      public function books()
      {

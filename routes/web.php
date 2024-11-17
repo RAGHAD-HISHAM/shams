@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BookController;
 
 
 
@@ -37,6 +38,13 @@ Route::get('/profile', function () {
     return view('site.profile');
 });
 
+Route::get('/category', function () {
+    return view('admin.catagory.index');
+});
+Route::get('/books', function () {
+    return view('admin.books.index');
+});
 
+Route::resource('books', BookController::class);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

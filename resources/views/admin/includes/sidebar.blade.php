@@ -31,7 +31,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./">
+          <a class="nav-link" href="/books">
             <span
               class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -53,7 +53,7 @@
           </a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link" href="#navbar-base" data-bs-auto-close="false" role="button" aria-expanded="false">
+          <a class="nav-link" href="{{url('/category')}}" data-bs-auto-close="false" role="button" aria-expanded="false">
             <span
               class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/package -->
               <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
@@ -67,7 +67,7 @@
               </svg>
             </span>
             <span class="nav-link-title">
-              Members
+              Category 
             </span>
           </a>
         </li>

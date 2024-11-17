@@ -59,8 +59,8 @@
       <div class="col-auto ms-auto d-print-none">
         <div class="btn-list">
           <span class="d-none d-sm-inline">
-            <a href="{{@yield('link to the first btn')}}" class="btn">
-            @yield('first btn')
+            <a href="@yield('link_to_the_first_btn')" class="btn">
+              @yield('first btn')
 
             </a>
           </span>

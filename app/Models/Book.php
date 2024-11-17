@@ -8,6 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Book extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'category_name',
+        'category_photo'
+    ];
     
     // One-to-Many (Book has many Borrowing records)
     public function borrowings()
