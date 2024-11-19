@@ -53,6 +53,8 @@
                 <tbody>
                     @foreach($books as $book)
                         <tr>
+                        <td><input class="form-check-input m-0 align-middle" type="checkbox"
+                        aria-label="Select invoice"></td> 
                             <td>{{ $book->id }}</td>
                             <td>{{ $book->Book_title }}</td>
                             <td>{{ $book->Book_Author }}</td>
