@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\Controller;
 
 
 
@@ -48,5 +49,6 @@ Route::get('/books', function () {
 
 Route::resource('books', BookController::class);
 Route::resource('categories', CategoryController::class);
+Route::get('/', [Controller::class, 'landingPage'])->name('landing');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

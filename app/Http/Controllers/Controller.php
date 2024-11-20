@@ -9,4 +9,10 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
+
+    public function landingPage()
+{
+    $categories = \App\Models\Category::all();
+    return view('landing', compact('categories'));
+}
 }
